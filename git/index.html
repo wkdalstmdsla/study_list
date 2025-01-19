@@ -1,1 +1,161 @@
 
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>git</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/css-git.css" />
+</head>
+<body>
+    <style>
+        .git_container {width: 50%;margin: 50px auto;}
+        .git_container .command {margin-top: 20px;}
+        .git_container .command > li {display: flex;}
+        .git_container .command > li > * {border: 1px solid;}
+        .git_container .command > li > p:first-child {width: 40%;}
+        .git_container .command > li > p:last-child {width: 60%;}
+    </style>
+    <div class="git_container">
+        <h3>git 명령어</h3>
+        <ul class="command">
+            <li>
+                <p>git init</p>
+                <p>git 선언</p>
+            </li>
+            <li>
+                <p>git status</p>
+                <p>git 변화 감지</p>
+            </li>
+            <li>
+                <p>git add .</p>
+                <p>git index영역으로 이동</p>
+            </li>
+            <li>
+                <p>git commit -m "commit log"</p>
+                <p>git commit "commit log"</p>
+            </li>
+            <li>
+                <p>git log</p>
+                <p>git log 확인</p>
+            </li>
+            <li>
+                <p>git reset --soft 돌아가고자하는 log의 해쉬값</p>
+                <p>git commit log 명 변경</p>
+            </li>
+            <li>
+                <p>git reset --mixed 돌아가고자하는 log의 해쉬값</p>
+                <p>git 파일 내용 수정/ index영역 삭제</p>
+            </li>
+            <li>
+                <p>git reset --hard 돌아가고자하는 log의 해쉬값</p>
+                <p>git 파일 삭제</p>
+            </li>
+            <li>
+                <p>git reflog</p>
+                <p>지워진 log까지 보여줌</p>
+            </li>
+            <li>
+                <p>git commit -ammend -m "commit log"</p>
+                <p>마지막 commit log 명 변경</p>
+            </li>
+            <li>
+                <p>touch "파일명"</p>
+                <p>파일 생성</p>
+            </li>
+            <li>
+                <p>touch "파일명"</p>
+                <p>파일 생성</p>
+            </li>
+            <li>
+                <p>git branch</p>
+                <p>branch 확인</p>
+            </li>
+            <li>
+                <p>git branch branch명</p>
+                <p>branch 생성</p>
+            </li>
+            <li>
+                <p>git checkout branch명</p>
+                <p>branch로 이동</p>
+            </li>
+            <li>
+                <p>git checkout -b branch명</p>
+                <p>branch 생성 후 이동</p>
+            </li>
+            <li>
+                <p>git merge branch명</p>
+                <p>branch명를 현재 branch로 merge</p>
+            </li>
+            <li>
+                <p>git rebase -i head ~n</p>
+                <p>head에서 n번째 log까지 정리</p>
+            </li>
+            <li>
+                <p>git rebase -i head ~n</p>
+                <p>d : 삭제/ pick : 선택/ r : 최상단의 log 변경/ s : 가장 과거의 log(pick)를 제외한 log 삭제(s)</p>
+            </li>
+        </ul>
+
+        <ul class="command">
+            <li>
+                <p>git remote add origin https://</p>
+                <p>클라우드 저장소 연결</p>
+            </li>
+            <li>
+                <p>git remote -v/ git ls-remote</p>
+                <p>클라우드 저장소 연결 확인</p>
+            </li>
+            <li>
+                <p>git push origin main</p>
+                <p>클라우드 저장소의 main branch로 업로드 및 병합</p>
+            </li>
+            <li>
+                <p>git push origin new branch</p>
+                <p>클라우드 저장소에 새로운 branch 생성 후 업로드</p>
+            </li>
+            <li>
+                <p>git remote rm origin</p>
+                <p>잘못된 주소 연결 해제</p>
+            </li>
+            <li>
+                <p>git pull origin main</p>
+                <p>클라우드 저장소의 main branch 내용 다운로드 및 병합</p>
+            </li>
+            <li>
+                <p>git clone https://</p>
+                <p>클라우드 저장소에서 main branch 내용 가져옴</p>
+            </li>
+            <li>
+                <p>git fetch orgin</p>
+                <p>클라우드 저장소의 branch를 가져옴/ merge x</p>
+            </li>
+            <li>
+                <p>git checkout -b branch origin/branch</p>
+                <p>branch를 만들고 orgin/branch의 내용을 업로드 및 병합</p>
+            </li>
+            <li>
+                <p>git merge --squash branch명</p>
+                <p>branch명의 모든 log를 하나의 log로 정리해서 현재 branch로 merge</p>
+            </li>
+            <li>
+                <p>git merge --no-ff branch명</p>
+                <p>merge 시 log명 생성/(fast-foward-merge 시 log가 남지 않는다)</p>
+            </li>
+            <li>
+                <p>git tag tag명</p>
+                <p>현재 branch에 tag를 남김</p>
+            </li>
+            <li>
+                <p>git pust --tags orgin main</p>
+                <p>클라우드 저장소에 tag를 남기면서 업로드</p>
+            </li>
+            <li>
+                <p>git tag -n</p>
+                <p>입력된 tag 값 확인</p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
